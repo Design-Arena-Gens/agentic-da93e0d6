@@ -1,0 +1,103 @@
+/* Global resets */
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a; /* slate-900 */
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+:root {
+  --primary: #0ea5e9; /* sky-500 */
+  --primary-600: #0284c7; /* sky-600 */
+  --accent: #22c55e; /* green-500 */
+  --muted: #64748b; /* slate-500 */
+  --ring: rgba(14, 165, 233, 0.4);
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.hero {
+  text-align: center;
+  margin: 24px 0 32px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  margin: 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(2, 8, 23, 0.06);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.card p { margin: 0 0 1rem; }
+.card strong { color: #0b6aa0; }
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 8px;
+}
+
+.benefit {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.benefit h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.benefit p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
+}
+
+.button:hover { background: var(--primary-600); transform: translateY(-1px); }
+.button:focus { outline: none; box-shadow: 0 0 0 4px var(--ring); }
+
+.disclaimer { color: var(--muted); margin-top: 12px; font-size: 0.9rem; }
+
+@media (max-width: 640px) {
+  .card { padding: 22px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+}
